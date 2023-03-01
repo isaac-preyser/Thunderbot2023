@@ -1,0 +1,17 @@
+{
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/SmartDashboard/Auto Mode": "String Chooser",
+      "/SmartDashboard/Autonomous Command": "Command",
+      "/SmartDashboard/Close Hand": "Command",
+      "/SmartDashboard/Lower Arm": "Command",
+      "/SmartDashboard/Open Hand": "Command",
+      "/SmartDashboard/Raise Arm": "Command",
+      "/SmartDashboard/buttonCloseHand": "Command",
+      "/SmartDashboard/buttonLowerArm": "Command",
+      "/SmartDashboard/buttonOpenHand": "Command",
+      "/SmartDashboard/buttonRaiseArm": "Command"
+    }
+  }
+}
