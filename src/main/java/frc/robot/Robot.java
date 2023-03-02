@@ -96,6 +96,9 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopInit() {
+        m_robotContainer.configureDefaultCommands(); //sets up the default commands needed for teleop. if these are setup upon creation of robot container, they interrupt our desired autonomous functions. 
+        //doing it this way means the motor safety feed will not be fed, throwing errors when not actively using the drive train in the space between the end of auto, and the start of teleop. I should test this tomorrow to see if this is a problem.. 
+        
         // This makes sure that the autonomous stops running when
         // teleop starts running. If you want the autonomous to
         // continue until interrupted by another command, remove
@@ -103,6 +106,7 @@ public class Robot extends TimedRobot {
         if (m_autonomousCommand != null) {
             m_autonomousCommand.cancel();
         }
+        
     }
 
     /**

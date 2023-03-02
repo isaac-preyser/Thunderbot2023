@@ -90,7 +90,7 @@ quadratureEncoder1 = new Encoder(4, 5, false, EncodingType.k4X);
 
     public void setConveyor (double position) {
         armConveyorController.set(position);
-        System.out.println(position);
+        //System.out.println(position);
     }
     public void setHand (double position) {
         armHandController.set(position);

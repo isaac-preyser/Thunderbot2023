@@ -36,7 +36,7 @@ public class SetArmCommand extends CommandBase {
 
     double posValue = (pos - neg);
     m_armSubystem.setConveyor(posValue);
-    System.out.println("Arm position: " + posValue);
+   // System.out.println("Arm position: " + posValue);
   }
 
   // Called once the command ends or is interrupted.
