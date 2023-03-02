@@ -21,18 +21,22 @@ package frc.robot;
  */
 public class Constants {
     public static final class DriveConstants {
-        public static final int kLeftMotor1Port = 0;
-        public static final int kLeftMotor2Port = 1;
-        public static final int kRightMotor1Port = 2;
-        public static final int kRightMotor2Port = 3; 
+        public static final int kLeftMotor1Port = 2;
+        public static final int kLeftMotor2Port = 3;
+        public static final int kRightMotor1Port = 0;
+        public static final int kRightMotor2Port = 1; 
     }
     public static final class OIConstants {
         public static final int kDriverControllerPort = 0;
     }
     public static final class ArmConstants {
-        public static final int kArmConveyorMotorPort = 4;
-        public static final int kArmActuatorPort = 5;
+        public static final int kArmConveyorMotorPort = 5;
+        public static final int kArmActuatorPort = 4;
         public static final int kHandActuatorPort = 6;
+    }
+    public static final class EncoderConstants {
+        public static final double kDistancePerPulseDrivetrain = 1.0; 
+        
     }
 }
 

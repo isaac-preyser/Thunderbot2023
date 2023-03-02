@@ -11,11 +11,11 @@ import frc.robot.subsystems.DriveSubsystem;
 
 public class ArcadeDrive extends CommandBase {
   /** Creates a new ArcadeDrive. */
-  private final DriveSubsystem driveSubsystem;
+  private final DriveSubsystem m_driveSubsystem;
   private final Supplier<Double> speedFunction, turnFunction;
 
   public ArcadeDrive(DriveSubsystem driveSubsystem, Supplier<Double> speedFunction, Supplier<Double> turnFunction) {
-    this.driveSubsystem = driveSubsystem;
+    this.m_driveSubsystem = driveSubsystem;
     this.speedFunction = speedFunction;
     this.turnFunction = turnFunction;
 
@@ -38,8 +38,8 @@ public class ArcadeDrive extends CommandBase {
 
     double leftSpeed = realTimeSpeed + realTimeTurn;
     double rightSpeed = realTimeSpeed - realTimeTurn;
-    System.out.println("Left Speed: " + leftSpeed + " Right Speed: " + rightSpeed + "");
-    driveSubsystem.setMotors(leftSpeed, rightSpeed);
+    //System.out.println("Left Speed: " + leftSpeed + " Right Speed: " + rightSpeed + "");
+    m_driveSubsystem.drive(realTimeSpeed, realTimeTurn);
 
   }
 
