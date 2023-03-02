@@ -126,6 +126,7 @@ final JoystickButton buttonCloseHand = new JoystickButton(driverController, Xbox
 buttonCloseHand.onFalse(new CloseHand( m_armSubsystem ).withInterruptBehavior(InterruptionBehavior.kCancelSelf));
                         SmartDashboard.putData("buttonCloseHand",new CloseHand( m_armSubsystem )); 
 
+
 final JoystickButton buttonOpenHand = new JoystickButton(driverController, XboxController.Button.kA.value);        
 buttonOpenHand.onTrue(new OpenHand( m_armSubsystem ).withInterruptBehavior(InterruptionBehavior.kCancelSelf));
                         SmartDashboard.putData("buttonOpenHand",new OpenHand( m_armSubsystem ));

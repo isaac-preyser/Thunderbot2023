@@ -35,7 +35,7 @@ public class SetArmCommand extends CommandBase {
     double pos = rightTrigger.get();
 
     double posValue = (pos - neg);
-    m_armSubystem.setConveyor(posValue);
+    m_armSubystem.setHand(posValue);
    // System.out.println("Arm position: " + posValue);
   }
 

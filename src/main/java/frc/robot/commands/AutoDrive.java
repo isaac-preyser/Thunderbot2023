@@ -24,7 +24,7 @@ public class AutoDrive extends CommandBase{
     }
 
     public void execute(){
-        m_driveSubsystem.drive(0.4, 0.0);
+        m_driveSubsystem.drive(-0.7, 0.0);
         System.out.println("Driving. Time: " + m_timer.get() + " seconds");
     }
 
