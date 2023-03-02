@@ -31,7 +31,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 public class GyroSubsystem extends SubsystemBase {
     //using Class ADIS16470_IMU
     private final ADIS16470_IMU gyro; //gyro object, global variable
-    
+    double angle; //angle variable, global variable
     
     
     
@@ -64,7 +64,7 @@ public class GyroSubsystem extends SubsystemBase {
     @Override
     public void periodic() {
         // This method will be called once per scheduler run
-        gyro.getAngle();
+        angle = gyro.getAngle();
         SmartDashboard.putNumber("gyro angle", gyro.getAngle());
     }
 
