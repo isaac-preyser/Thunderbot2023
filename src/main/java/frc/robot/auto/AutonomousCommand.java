@@ -52,7 +52,7 @@ public class AutonomousCommand extends SequentialCommandGroup {
 
         addCommands(
             new SequentialCommandGroup(
-                new AutoDrive(m_DriveSubsystem, 4)
+                new AutoDrive(m_DriveSubsystem, i)
             )
         );
 

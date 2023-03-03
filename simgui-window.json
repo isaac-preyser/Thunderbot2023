@@ -15,6 +15,11 @@
     }
   },
   "Window": {
+    "###/SmartDashboard/Auto Mode": {
+      "Collapsed": "0",
+      "Pos": "109,70",
+      "Size": "307,60"
+    },
     "###/SmartDashboard/Autonomous Command": {
       "Collapsed": "0",
       "Pos": "60,60",

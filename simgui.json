@@ -10,6 +10,13 @@
         "visible": true
       }
     },
+    "Other Devices": {
+      "ADIS16470[0]": {
+        "header": {
+          "open": true
+        }
+      }
+    },
     "PWM Outputs": {
       "window": {
         "visible": true
@@ -39,6 +46,13 @@
       "/SmartDashboard/buttonRaiseArm": "Command",
       "/SmartDashboard/buttonRaiseFirstStage": "Command",
       "/SmartDashboard/buttonSecondJoint": "Command"
+    },
+    "windows": {
+      "/SmartDashboard/Auto Mode": {
+        "window": {
+          "visible": true
+        }
+      }
     }
   },
   "NetworkTables": {

@@ -2,21 +2,25 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package frc.robot.commands;
+package frc.robot.test;
 
+import edu.wpi.first.wpilibj.AddressableLED;
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.subsystems.ArmSubsystem;
+import frc.robot.subsystems.GyroSubsystem;
 
-public class SecondJointRaise extends CommandBase {
-  /** Creates a new SecondJointRaise. */
+public class SetGyro extends CommandBase {
+  /** Creates a new SetGyro. */
+  double target;
+  GyroSubsystem m_gyro;
+  char axis; 
+  boolean isFinished = false;
 
-  private boolean finished = false;
 
-  private final ArmSubsystem armSubsystem;
-  public SecondJointRaise(ArmSubsystem armSubsystem) {
-    this.armSubsystem = armSubsystem;
-    
-    addRequirements(armSubsystem);
+  public SetGyro(GyroSubsystem g, double t, char c) {
+    addRequirements(g);
+    this.target = t;
+    this. m_gyro = g;
+    this.axis = c;
     // Use addRequirements() here to declare subsystem dependencies.
   }
 
@@ -27,9 +31,10 @@ public class SecondJointRaise extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    armSubsystem.setConveyor(-0.5);
-    finished = true; 
-    }
+    m_gyro.setAngle(target, axis);
+    System.out.println("Target angle of: " + target + " set on the " + axis + "axis");
+    
+  }
 
   // Called once the command ends or is interrupted.
   @Override
@@ -38,6 +43,6 @@ public class SecondJointRaise extends CommandBase {
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
-    return finished;
+    return isFinished;
   }
 }
