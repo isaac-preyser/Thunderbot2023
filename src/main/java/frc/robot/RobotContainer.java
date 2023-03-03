@@ -12,6 +12,7 @@
 
 package frc.robot;
 
+import frc.robot.auto.AutoBalance;
 import frc.robot.auto.AutonomousCommand;
 import frc.robot.commands.*;
 import frc.robot.subsystems.*;
@@ -154,6 +155,8 @@ buttonLowerFirstStage.onFalse(new SetArmCommand(m_armSubsystem, //
 //don't use below code.
 //final Trigger raiseLowerArm = new Trigger(driverController.getRightTriggerAxis() - driverController.getLeftTriggerAxis() != 0){ 
 
+final JoystickButton buttonAutoLevel = new JoystickButton(driverController, XboxController.Button.kY.value);
+buttonAutoLevel.onTrue(new AutoBalance(m_driveSubsystem, m_gyroSubsystem).withInterruptBehavior(InterruptionBehavior.kCancelSelf));
 
 
 
