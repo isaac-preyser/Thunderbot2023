@@ -52,7 +52,8 @@ public class AutoBalance extends CommandBase {
     }
     if (currentAngle < acceptableAngleOffset && currentAngle > -acceptableAngleOffset){
       m_Drive.drive(0,0);
-      //finished = true;
+      finished = true;
+      System.out.println("Robot levelled.");
     }
 
   }

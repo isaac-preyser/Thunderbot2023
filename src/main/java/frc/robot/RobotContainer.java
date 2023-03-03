@@ -163,7 +163,7 @@ buttonLowerFirstStage.onFalse(new SetArmCommand(m_armSubsystem, //
 );
 
 final JoystickButton buttonAutoBalance = new JoystickButton(driverController, XboxController.Button.kStart.value);
-buttonAutoBalance.onTrue(new AutoBalance(m_driveSubsystem, m_gyroSubsystem).withInterruptBehavior(InterruptionBehavior.kCancelSelf));
+buttonAutoBalance.whileTrue(new AutoBalance(m_driveSubsystem, m_gyroSubsystem).withInterruptBehavior(InterruptionBehavior.kCancelSelf));
 //when the both triggers are at 0, do not move the arm. use the right trigger as a positive movement up, and the left as movement down. 
 //therefore RT - LT = direction of movement. If negative, move the arm down. 
 //don't use below code.
