@@ -46,6 +46,13 @@
       "/SmartDashboard/buttonRaiseArm": "Command",
       "/SmartDashboard/buttonRaiseFirstStage": "Command",
       "/SmartDashboard/buttonSecondJoint": "Command"
+    },
+    "windows": {
+      "/SmartDashboard/Auto Mode": {
+        "window": {
+          "visible": true
+        }
+      }
     }
   },
   "NetworkTables": {
