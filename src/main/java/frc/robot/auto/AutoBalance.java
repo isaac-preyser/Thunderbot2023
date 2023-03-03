@@ -31,24 +31,24 @@ public class AutoBalance extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-
+    
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
     double currentAngle = m_Gyro.angle;
-    double acceptableAngleOffset = 5.0; //the amount, plus or minus, that the robot should tolerate as "docked".
+    double acceptableAngleOffset = 0.5; //the amount, plus or minus, that the robot should tolerate as "docked".
 
     System.out.println("Current Angle: " + currentAngle);
 
-    if (currentAngle < -acceptableAngleOffset){
+    if (currentAngle < acceptableAngleOffset){
       System.out.println("Moving Backwards");
-      m_Drive.drive(-0.1, 0);
+      m_Drive.drive(-1, 0);
     }
     if (currentAngle > acceptableAngleOffset){
       System.out.println("Moving Forwards");
-      m_Drive.drive(0.1, 0);
+      m_Drive.drive(1, 0);
     }
     if (currentAngle < acceptableAngleOffset && currentAngle > -acceptableAngleOffset){
       m_Drive.drive(0,0);

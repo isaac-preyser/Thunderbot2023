@@ -55,7 +55,7 @@ public class LowerArm extends CommandBase {
     @Override
     public void execute() {
         //replace with inverse kinematics later. 
-        m_armSubsystem.setArm(-0.9);
+        m_armSubsystem.setConveyor(-1.0);
 
     }
     

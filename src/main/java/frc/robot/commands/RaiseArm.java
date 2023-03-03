@@ -58,7 +58,7 @@ public class RaiseArm extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        m_armSubsystem.setArm(1); //replace with inverse kinematics later
+        m_armSubsystem.setConveyor(1); //replace with inverse kinematics later
         isFinished = true;
     }
     
