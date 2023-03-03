@@ -55,7 +55,7 @@ public class CloseHand extends CommandBase {
     @Override
     public void execute() {
         //set the hand to -1.
-        m_armSubsystem.setHand(-1);
+        m_armSubsystem.setConveyor(-1); //overridden to adapt for pusher
     }
     
     // Called once the command ends or is interrupted.
