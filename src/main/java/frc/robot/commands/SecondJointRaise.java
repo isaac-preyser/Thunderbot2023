@@ -9,6 +9,9 @@ import frc.robot.subsystems.ArmSubsystem;
 
 public class SecondJointRaise extends CommandBase {
   /** Creates a new SecondJointRaise. */
+
+  private boolean finished = false;
+
   private final ArmSubsystem armSubsystem;
   public SecondJointRaise(ArmSubsystem armSubsystem) {
     this.armSubsystem = armSubsystem;
@@ -25,6 +28,7 @@ public class SecondJointRaise extends CommandBase {
   @Override
   public void execute() {
     armSubsystem.setConveyor(-0.5);
+    finished = true; 
     }
 
   // Called once the command ends or is interrupted.
@@ -34,6 +38,6 @@ public class SecondJointRaise extends CommandBase {
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
-    return false;
+    return finished;
   }
 }

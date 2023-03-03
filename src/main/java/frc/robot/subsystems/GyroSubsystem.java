@@ -31,7 +31,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 public class GyroSubsystem extends SubsystemBase {
     //using Class ADIS16470_IMU
     private final ADIS16470_IMU gyro; //gyro object, global variable
-    double angle; //angle variable, global variable
+    public double angle; //angle variable, global variable
     
     
     
