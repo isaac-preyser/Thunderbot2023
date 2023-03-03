@@ -74,6 +74,19 @@ public class GyroSubsystem extends SubsystemBase {
         SmartDashboard.putNumber("gyro angle", gyro.getAngle());
     }
 
+    public void setAngle(double angle, char axis){
+        switch (axis){
+            case 'x':
+                sim.setGyroAngleX(angle);
+            case 'y': 
+                sim.setGyroAngleY(angle);
+            case 'z': 
+                sim.setGyroAngleZ(angle);
+            default: 
+                System.out.println("Couldn't set gyro angle, inappropriate input on axis char.");
+        }
+    }
+
 
     @Override
     public void simulationPeriodic() {
